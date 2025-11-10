@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Livello_2" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357.16 350.79">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #484b4c;
+      }
+    </style>
+  </defs>
+  <g id="Livello_2-2" data-name="Livello 2">
+    <g>
+      <rect class="cls-1" y="280.63" width="357.16" height="70.16"/>
+      <rect class="cls-1" x="89.29" width="178.58" height="70.16"/>
+      <polygon class="cls-1" points="90.19 .2 .2 280.94 64.62 350.79 171.51 18.36 90.19 .2"/>
+      <polygon class="cls-1" points="266.92 .2 356.9 280.94 292.48 350.79 185.6 18.36 266.92 .2"/>
+    </g>
+  </g>
+</svg>

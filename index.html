@@ -1,18 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mappa dei Vulcani</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.1/p5.min.js"></script>
+</head>
+<body>
 
-    <title>Sketch</title>
+ 
+ <!-- Land page-->
+  <section id="intro">
+    <div class="intro-content">
+          <div class="description-card">
+<h2> Mappa Interattiva dei Vulcani</h2>
+        <p>
+          Questo sito mostra un dataset di vulcani proveniente da fonti open data, rappresentato su una mappa in proiezione Mercatore.
+          <br><br>
+          È stato sviluppato in <strong>p5.js</strong>, sfruttando funzioni di proiezione geografica, gestione di icone SVG e interazioni tramite hover e click.
+        </p>
+        <h3>Fonti</h3>
+        <ul>
+          <li>Dataset: Global Volcanism Program (Smithsonian Institution)</li>
+          <li>Mappa base: Wikimedia Commons</li>
+          <li>Icone vulcani: Noun Project (SVG ottimizzati)</li>
+        </ul>
+      </div>
+    </div>
+<!-- legenda -->
+    <div class="legend-card">
+      <h2>Tipologie di Vulcani</h2>
+      <ul class="legend-list">
+            <li class="legend-item">
+              <img src="assets/stratovolcano.svg" alt="Stratovolcano" class="legend-icon">
+              <span class="legend-label">Stratovolcano</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/shield_volcano.svg" alt="Shield volcano" class="legend-icon">
+              <span class="legend-label">Shield volcano</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/complex_volcano.svg" alt="Complex volcano" class="legend-icon">
+              <span class="legend-label">Complex volcano</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/cinder_cone.svg" alt="Cinder cone" class="legend-icon">
+              <span class="legend-label">Cinder cone</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/pyroclastic_cone.svg" alt="Pyroclastic cone" class="legend-icon">
+              <span class="legend-label">Pyroclastic cone</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/tuff_cone.svg" alt="Tuff cone" class="legend-icon">
+              <span class="legend-label">Tuff cone</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/lava_dome.svg" alt="Lava dome" class="legend-icon">
+              <span class="legend-label">Lava dome</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/explosion_crater.svg" alt="Explosion crater" class="legend-icon">
+              <span class="legend-label">Explosion crater</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/caldera.svg" alt="Caldera" class="legend-icon">
+              <span class="legend-label">Caldera</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/fissure_vent.svg" alt="Fissure vent" class="legend-icon">
+              <span class="legend-label">Fissure vent</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/maar.svg" alt="Maar" class="legend-icon">
+              <span class="legend-label">Maar</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/submarine_volcano.svg" alt="Submarine volcano" class="legend-icon">
+              <span class="legend-label">Submarine volcano</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/volcanic_field.svg" alt="Volcanic field" class="legend-icon">
+              <span class="legend-label">Volcanic field</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/pumice_cone.svg" alt="Pumice cone" class="legend-icon">
+              <span class="legend-label">Pumice cone</span>
+            </li>
+            <li class="legend-item">
+              <img src="assets/scoria_cones.svg" alt="Scoria cones" class="legend-icon">
+              <span class="legend-label">Scoria cones</span>
+            </li>
+          </ul>
+        </div>
+        
+      </ul>
+      
+    </div>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <div class="scroll-down">
+      <div class="arrow">↓</div>
+    </div>
+  </section>
 
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-  </head>
+  <!-- Mappa -->
+  <section id="map-section">
+    <div id="map-container"></div>
+  </section>
 
-  <body>
-    <script src="sketch.js"></script>
-  </body>
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
